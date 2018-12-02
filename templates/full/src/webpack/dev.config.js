@@ -14,6 +14,9 @@ const devConfig = {
   devServer: {
     contentBase: './dist',
     hot: true,
+    proxy: {
+      '/graphql': 'http://localhost:4567/',
+    },
   },
 }
 
