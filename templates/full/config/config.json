@@ -14,5 +14,8 @@
     "migrations": {
       "directory": "./src/migrations"
     }
+  },
+  "app": {
+    "secret": "the app secret so change it"
   }
 }
