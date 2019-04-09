@@ -4,7 +4,6 @@ const baseConfig = require('./config')
 
 const devConfig = {
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: 'Custom template',
       template: './src/ui/index.html',
@@ -13,7 +12,7 @@ const devConfig = {
   ],
   devServer: {
     contentBase: './dist',
-    hot: true,
+    hot: false,
     proxy: {
       '/graphql': 'http://localhost:4567/',
     },
