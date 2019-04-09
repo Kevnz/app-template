@@ -1,0 +1,6 @@
+{
+  "name": "deck",
+  "scripts": {
+    "test": "echo \"This is a placeholder\" && exit 0"
+  }
+}
