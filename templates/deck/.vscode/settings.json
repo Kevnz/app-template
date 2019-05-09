@@ -6,7 +6,16 @@
   },
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#f0e920",
-    "titleBar.inactiveBackground": "#f0e920cc"
+    "titleBar.inactiveBackground": "#f0e920cc",
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveForeground": "#FFFFFFCC",
+    "titleBar.border": "#33373f",
+    "activityBar.foreground": "#f0e920",
+    "activityBar.background": "#33373f",
+    "activityBarBadge.foreground": "#fff",
+    "tab.activeBorder": "#f0e920",
+    "tab.activeBorderTop": "#f0e920",
+    "tab.activeBackground": "#42464d"
   },
   "vsicons.presets.jsOfficial": true,
   "vsicons.presets.jsonOfficial": true,

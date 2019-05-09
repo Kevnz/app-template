@@ -7,8 +7,15 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#f02020",
     "titleBar.inactiveBackground": "#f02020AA",
-    "titleBar.activeForeground": "#FFF",
-    "titleBar.inactiveForeground": "#FFFFFFCC"
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveForeground": "#FFFFFFCC",
+    "titleBar.border": "#33373f",
+    "activityBar.foreground": "#f02020",
+    "activityBar.background": "#33373f",
+    "activityBarBadge.foreground": "#fff",
+    "tab.activeBorder": "#f02020",
+    "tab.activeBorderTop": "#f02020",
+    "tab.activeBackground": "#42464d"
   },
   "vsicons.presets.jsOfficial": true,
   "vsicons.presets.jsonOfficial": true,
