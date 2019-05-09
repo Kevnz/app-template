@@ -5,17 +5,14 @@ const baseConfig = require('./config')
 const devConfig = {
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Custom template',
+      title: 'Web App',
       template: './src/ui/index.html',
-      historyApiFallback: true,
     }),
   ],
   devServer: {
+    historyApiFallback: true,
     contentBase: './dist',
-    hot: false,
-    proxy: {
-      '/graphql': 'http://localhost:4567/',
-    },
+    hot: true,
   },
 }
 
