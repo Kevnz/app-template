@@ -1,7 +1,8 @@
 import React from 'react'
 import { Form, TextArea, TextBox } from 'react-form-elements'
+import { usePost } from '@brightleaf/react-hooks'
 const ContactForm = () => {
-
+  const { data, error, loading, postData } = usePost()
   return (
     <main>
       <section>
@@ -12,6 +13,7 @@ const ContactForm = () => {
               console.log('Name', values.userName)
               console.log('Email', values.userEmail)
               console.log('Message', values.message)
+              postData(values)
             }}
           >
             <TextBox
