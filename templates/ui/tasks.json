@@ -1,0 +1,11 @@
+{
+  "test": "npx jest --config=jest.config.js --detectOpenHandles --forceExit --watch",
+  "lint": "npx eslint ./src",
+  "build": "npx webpack --config ./src/webpack/prod.config.js --mode production",
+
+  "dev": [
+    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development"
+  ],
+  "storybook": "npx start-storybook -p 6006",
+  "build-storybook": "npx build-storybook"
+}
