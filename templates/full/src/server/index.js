@@ -1,7 +1,7 @@
 require('xtconf')()
 const Path = require('path')
 const { ApolloServer } = require('apollo-server-hapi')
-const Hapi = require('hapi')
+const Hapi = require('@hapi/hapi')
 const Manifest = require('./manifest')
 const Types = require('./graphql/types')
 const Resolvers = require('./graphql/resolvers')
