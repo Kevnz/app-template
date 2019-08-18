@@ -1,9 +1,16 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const baseConfig = require('./config')
 
 const devConfig = {
   plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
     new webpack.DefinePlugin({
       process: {
         env: {
@@ -18,7 +25,7 @@ const devConfig = {
   ],
   devServer: {
     historyApiFallback: true,
-    contentBase: './dist',
+    contentBase: './src/public',
     hot: true,
   },
 }
