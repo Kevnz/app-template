@@ -29,6 +29,6 @@ export default class App extends Component {
           </Router>
         </React.Suspense>
       </Fragment>
-  )
+    )
   }
 }
