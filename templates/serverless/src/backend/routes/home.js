@@ -1,9 +1,15 @@
-module.exports = [{
-  method: 'GET',
-  path: '/',
-  config: {
-    handler: (request, h) => {
-      return 'API'
-    }
-  }
+module.exports = [ {
+  method: 'get',
+  path: '/api/home',
+  options: {
+    id: `get-home`,
+    plugins: {
+      lalalambda: true,
+    },
+    handler: async (r, h) => {
+      return {
+        result: 'something'
+      }
+    },
+  },
 }]

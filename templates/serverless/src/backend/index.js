@@ -1,15 +1,13 @@
 require('xtconf')()
 const Path = require('path')
-const { ApolloServer } = require('apollo-server-hapi')
 const Hapi = require('@hapi/hapi')
 const Manifest = require('./manifest')
-const Types = require('./graphql/types')
-const Resolvers = require('./graphql/resolvers')
+
 let app
 
 const start = async () => {
   try {
-    const server = new ApolloServer({ typeDefs: Types, resolvers: Resolvers })
+
     app = Hapi.server({
       port: process.env.PORT,
       routes: {
@@ -18,30 +16,25 @@ const start = async () => {
         },
         cors: {
           origin: ['*'],
-          additionalHeaders: ['x-media-server', 'content-type'],
+          additionalHeaders: ['x-local-serverless', 'content-type'],
         },
       },
     })
     await app.register(Manifest)
-    await server.applyMiddleware({
-      app,
-    })
-
-    await server.installSubscriptionHandlers(app.listener)
 
     await app.start()
   } catch (err) {
-    console.log(err)
+    console.error('Error starting server', err)
     process.exit(1)
   }
-  console.log('🚀 Server running')
+  console.info('🚀 Server running')
 }
 
 process.on('SIGINT', async () => {
-  console.log('stopping server')
+  console.warn('stopping server')
   try {
     await app.stop({ timeout: 10000 })
-    console.log('The server has stopped 🛑')
+    console.warn('The server has stopped 🛑')
     process.exit(0)
   } catch (err) {
     console.error('shutdown server error', err)

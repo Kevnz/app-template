@@ -28,7 +28,7 @@ module.exports = [
   {
     plugin: require('hapi-router'),
     options: {
-      routes: ['src/server/routes/**/*.js'],
+      routes: ['src/backend/routes/**/*.js'],
     },
   },
 ]

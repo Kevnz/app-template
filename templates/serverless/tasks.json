@@ -7,14 +7,15 @@
     "node ./src/scripts/delay.js"
   ],
   "dev": [
-    "nodemon ./src/server/index.js",
-    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development"
+    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development",
+    "export SLS_DEBUG=* && export IS_OFFLINE=true && sls offline start"
   ],
   "postdev": [
     "docker-compose -f ./docker/dev/docker-compose.yml down"
   ],
   "docker:up": "docker-compose -f ./docker/dev/docker-compose.yml up",
   "docker:down": "docker-compose -f ./docker/dev/docker-compose.yml down",
-  "storybook": "npx tart-storybook -p 6006",
-  "build-storybook": "npx build-storybook"
+  "deploy:dev": "export STAGE=dev && serverless deploy --stage dev",
+  "deploy:test": "export STAGE=qa && export SLS_DEBUG=* && serverless deploy --stage qa",
+  "deploy:prod": "export STAGE=prod && serverless deploy --stage prod"
 }
