@@ -13,9 +13,9 @@ const initialState = {
 }
 
 export const useAuthHook = () => {
-  const [authToken, setAuthToken] = useLocalStorage('bbox_auth_token')
+  const [authToken, setAuthToken] = useLocalStorage('app_auth_token')
   const [authUser, setAuthUser] = useLocalStorage(
-    'bbox_auth_user',
+    'app_auth_user',
     initialState.user
   )
 
