@@ -34,7 +34,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.mjs', '.js', '.jsx'],
-    modules: ['node_modules', 'src', path.resolve(__dirname, '../ui')],
+    modules: ['node_modules', 'src', path.resolve(__dirname, '../')],
     alias: {},
   },
   output: {

@@ -6,9 +6,9 @@ import {
   waitForElement,
 } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import '@babel/polyfill'
+
 import { AuthContext, AuthProvider } from '../auth'
-import { Layout } from '../../layout'
+
 
 const Thinger = () => {
   const { state, dispatch } = useContext(AuthContext)
@@ -60,13 +60,6 @@ function App() {
   )
 }
 
-function LayoutApp() {
-  return (
-    <AuthProvider>
-      <Layout />
-    </AuthProvider>
-  )
-}
 afterEach(cleanup)
 
 describe('The Auth Context', () => {
@@ -82,8 +75,5 @@ describe('The Auth Context', () => {
     expect(loggedOut).toHaveTextContent('User: Test User')
     return done()
   })
-  it('should render initial state data', () => {
-    const { getByText } = render(<LayoutApp />)
-    expect(getByText(/^Login/)).toHaveTextContent('Login')
-  })
+
 })

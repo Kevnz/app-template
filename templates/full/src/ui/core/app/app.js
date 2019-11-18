@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
 import { Router } from '@reach/router'
 import { NavBar, NavBarBrand, Section } from '@brightleaf/elements'
-import { Loading } from 'components/loading'
-import { AuthProvider } from 'core/context/auth'
-import { AppProvider } from 'core/context/app'
+import { Loading } from 'ui/components/loading'
+import { AuthProvider } from 'ui/core/context/auth'
+import { AppProvider } from 'ui/core/context/app'
 import './app.scss'
-const About = React.lazy(() => import('features/about'))
-const Home = React.lazy(() => import('features/home'))
-const Contact = React.lazy(() => import('features/contact'))
-const Login = React.lazy(() => import('features/login'))
+const About = React.lazy(() => import('ui/features/about'))
+const Home = React.lazy(() => import('ui/features/home'))
+const Contact = React.lazy(() => import('ui/features/contact'))
+const Login = React.lazy(() => import('ui/features/login'))
 export default () => {
   return (
     <AuthProvider>
