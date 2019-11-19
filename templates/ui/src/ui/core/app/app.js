@@ -15,7 +15,7 @@ export default () => {
       <AppProvider>
         <NavBar isPrimary isFixedTop className="is-radiusless">
           <NavBarBrand
-            src="/favicon-32x32-invert.png"
+            src="/favicon-32x32.png"
             href="/"
             target="navTarget"
             width="32"
