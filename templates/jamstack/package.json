@@ -1,0 +1,6 @@
+{
+  "name": "myapp",
+  "scripts": {
+    "test": "echo \"This is a placeholder\" && exit 0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "test": "npx jest --config=jest.config.js --detectOpenHandles --forceExit",
+  "watch": "npx jest --config=jest.config.js --detectOpenHandles --forceExit --watch",
+  "lint": "npx eslint ./src",
+  "build": [
+    "npx webpack --config ./src/webpack/prod.config.js --mode production",
+    "npx netlify-lambda build ./src/functions"
+  ],
+  "dev": [
+    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development"
+  ],
+  "dev:test": [
+    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development"
+  ],
+  "ignore:dev:config": "git update-index --assume-unchanged ./config/config.development.json",
+  "notice:dev:config": "git update-index --no-assume-unchanged ./config/config.development.json"
+
+}
