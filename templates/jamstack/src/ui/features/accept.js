@@ -7,7 +7,7 @@ import {
   Button,
 } from '@brightleaf/elements'
 import { Form, TextInput, PasswordInput } from 'react-form-elements'
-import { Link, navigate } from '@reach/router'
+import { Link, navigate } from '@gatsbyjs/reach-router'
 import GoTrue from 'gotrue-js'
 
 const auth = new GoTrue({

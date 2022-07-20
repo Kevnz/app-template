@@ -14,7 +14,7 @@ import {
 } from '@brightleaf/elements'
 
 import { Portal } from '@brightleaf/elements/lib/utils'
-import { navigate } from '@reach/router'
+import { navigate } from '@gatsbyjs/reach-router'
 import { Form, TextInput, PasswordInput } from 'react-form-elements'
 import { useIdentityContext } from 'react-netlify-identity'
 

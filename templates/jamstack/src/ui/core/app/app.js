@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Router } from '@reach/router'
+import { Router } from '@gatsbyjs/reach-router'
 import { NavBar, NavBarBrand, Section } from '@brightleaf/elements'
 import { IdentityContextProvider } from 'react-netlify-identity'
 import { Loading } from 'components/loading'

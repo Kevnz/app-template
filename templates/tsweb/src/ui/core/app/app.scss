@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@import 'bulma/sass/utilities/initial-variables';
+
+$navbar-burger-color: #7f888f;
+
+@import '~bulmaswatch/lux/variables';
+
+@import 'bulma/bulma';
+
+@import '~bulmaswatch/lux/overrides';
+
+.flame-log {
+  width: 62px;
+  vertical-align: middle;
+}
+
+.navigation-view .navbar-burger {
+  color: $navbar-burger-color;
+}
+
+.navbar-item img {
+  max-height: 1.75rem;
+  max-width: 1.75rem;
+}

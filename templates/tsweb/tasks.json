@@ -1,0 +1,7 @@
+{
+  "test": "npx jest --config=jest.config.js --detectOpenHandles --forceExit",
+  "watch": "npx jest --config=jest.config.js --detectOpenHandles --forceExit --watch",
+  "lint": "npx eslint ./src",
+  "build": "npx webpack --config ./src/webpack/prod.config.js --mode production",
+  "dev": ["npx webpack serve -c ./src/webpack/dev.config.js --mode development"]
+}

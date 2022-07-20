@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { Form, TextBox, Password } from 'react-form-elements'
 import { useQuery } from '@brightleaf/react-hooks'
 import { Button } from '@brightleaf/elements'
-import { navigate } from '@reach/router'
+import { navigate } from '@gatsbyjs/reach-router'
 import { AuthContext } from '../core/context/auth'
 
 const LOGIN_MUTATION = `

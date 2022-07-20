@@ -1,0 +1,22 @@
+{
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/ui/global.d.ts",
+    "src/ui/fonts.d.ts"
+  ],
+  "exclude": ["node_modules/**/*"],
+  "compilerOptions": {
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "types": ["jest", "@types/node", "@types/testing-library__jest-dom"],
+    "baseUrl": "./src",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    // Strict flags
+    "strictNullChecks": true,
+    "strictBindCallApply": true
+  }
+}

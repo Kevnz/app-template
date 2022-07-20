@@ -4,6 +4,6 @@
   "lint": "npx eslint ./src",
   "build": "npx webpack --config ./src/webpack/prod.config.js --mode production",
   "dev": [
-    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development"
+    "npx webpack serve --config ./src/webpack/dev.config.js --mode development"
   ]
 }

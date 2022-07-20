@@ -7,10 +7,10 @@
     "npx netlify-lambda build ./src/functions"
   ],
   "dev": [
-    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development"
+    "npx webpack serve --config ./src/webpack/dev.config.js --mode development"
   ],
   "dev:test": [
-    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development"
+    "npx webpack serve --config ./src/webpack/dev.config.js --mode development"
   ],
   "ignore:dev:config": "git update-index --assume-unchanged ./config/config.development.json",
   "notice:dev:config": "git update-index --no-assume-unchanged ./config/config.development.json"

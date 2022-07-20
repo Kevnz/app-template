@@ -7,7 +7,7 @@
     "node ./src/scripts/delay.js"
   ],
   "dev": [
-    "npx webpack-dev-server --config ./src/webpack/dev.config.js --mode development",
+    "npx webpack serve --config ./src/webpack/dev.config.js --mode development",
     "export SLS_DEBUG=* && export IS_OFFLINE=true && sls offline start"
   ],
   "postdev": [

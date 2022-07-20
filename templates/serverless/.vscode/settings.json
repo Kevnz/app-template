@@ -1,8 +1,10 @@
 {
-  "eslint.autoFixOnSave": true,
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   },
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#94b964",
