@@ -24,12 +24,12 @@ const prodConfig = {
       title: 'UI Web App',
       template: './src/ui/index.html',
     }),
-    new CopyPlugin([
+    new CopyPlugin({patterns:[
       {
         from: path.join(process.cwd(), '/src/public'),
         to: path.join(process.cwd(), '/dist'),
       },
-    ]),
+    ]}),
   ],
   output: {
     path: path.join(process.cwd(), '/dist'),
